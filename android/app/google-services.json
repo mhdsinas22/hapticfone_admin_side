@@ -1,0 +1,126 @@
+{
+  "project_info": {
+    "project_number": "1029557359685",
+    "project_id": "hapticfone-ff0c4",
+    "storage_bucket": "hapticfone-ff0c4.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1029557359685:android:72169c1fd29ff96bf9ff2c",
+        "android_client_info": {
+          "package_name": "Haptic.fone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1029557359685-9ejeq9aj38fck1i62shedvlh891o4t1i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "Haptic.fone",
+            "certificate_hash": "0e0c2005e3d2a408bb1bb7666d16e81a212424bb"
+          }
+        },
+        {
+          "client_id": "1029557359685-nte9iei15tb5193l3pgut4lt5i89ooh0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBo6RS9BxgT7E8BQT0KX3GucpkAn1MJlBs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1029557359685-nte9iei15tb5193l3pgut4lt5i89ooh0.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1029557359685-35b8u8c0shcd8688d3kmo6kq6ejmkhos.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.hapticfone"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1029557359685:android:b28873fb16354180f9ff2c",
+        "android_client_info": {
+          "package_name": "com.example.hapticadmin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1029557359685-nte9iei15tb5193l3pgut4lt5i89ooh0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBo6RS9BxgT7E8BQT0KX3GucpkAn1MJlBs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1029557359685-nte9iei15tb5193l3pgut4lt5i89ooh0.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1029557359685-35b8u8c0shcd8688d3kmo6kq6ejmkhos.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.hapticfone"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1029557359685:android:c206d92639df6030f9ff2c",
+        "android_client_info": {
+          "package_name": "com.example.hapticfone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1029557359685-nte9iei15tb5193l3pgut4lt5i89ooh0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBo6RS9BxgT7E8BQT0KX3GucpkAn1MJlBs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1029557359685-nte9iei15tb5193l3pgut4lt5i89ooh0.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1029557359685-35b8u8c0shcd8688d3kmo6kq6ejmkhos.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.hapticfone"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
