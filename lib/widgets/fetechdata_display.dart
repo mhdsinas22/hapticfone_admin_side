@@ -64,9 +64,8 @@ class FetechdataDisplay extends StatelessWidget {
                                     IconButton(
                                       onPressed: () {
                                         Get.to(
-                                          arguments: document["brand"],
                                           AddstockPage(
-                                            image: document["thumbnail"],
+                                            image: document["images"],
                                             editstrogae: document["stroage"],
                                             editstock: document["stock"],
                                             editram: document["ram"],

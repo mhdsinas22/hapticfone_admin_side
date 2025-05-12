@@ -8,7 +8,7 @@ import 'package:random_string/random_string.dart';
 
 class Usercontroller extends GetxController {
   static Usercontroller get instance => Get.find();
-
+  String radnomnumber = randomAlphaNumeric(10);
   final stockquantity = TextEditingController();
   final mobilename = TextEditingController();
   final ramcontroller = TextEditingController();
@@ -17,43 +17,40 @@ class Usercontroller extends GetxController {
   final pricecontroller = TextEditingController();
   final userrepositycontroller = Get.put(UserRepositry());
   final dropdowncontroller = Get.put(Dropdowncontroller());
-  final imagepickercontroller = Get.put(
-    Imagepickercontroller(),
-    permanent: true,
-  );
-  void addproduct() {
-    if (stockquantity.text.isNotEmpty || mobilename.text.isNotEmpty) {
-      String radnomnumber = randomAlphaNumeric(10);
-      imagepickercontroller.uploadimagetocloudinary();
-      // imagepickercontroller.selctedimage.close();
-      final products = Prouductmodels(
-        id: radnomnumber,
-        mobilemodelname: mobilename.text,
-        stock: int.parse(stockquantity.text),
-        price: double.parse(pricecontroller.text),
-        thumbnail: imagepickercontroller.uploadimagessssssulrl.first,
-        images: imagepickercontroller.uploadimagessssssulrl,
-        condtion: dropdowncontroller.condtionselectedvalue.value,
-        ram: ramcontroller.text,
-        brand: dropdowncontroller.selectedvalue.value,
-        color: colorcontroller.text,
-        storage: storagecontroller.text,
-      );
-      userrepositycontroller.addtheproducts(products, radnomnumber);
-      print("add productssucesss");
-    } else {
-      print("sorry");
-    }
+  final imagepickercontroller = Get.put(Imagepickercontroller());
+  Future<void> addproduct() async {
+    await imagepickercontroller.uploadimagetocloudinary();
+    final products = Prouductmodels(
+      id: radnomnumber,
+      mobilemodelname: mobilename.text,
+      stock: int.parse(stockquantity.text),
+      price: double.parse(pricecontroller.text),
+      thumbnail: imagepickercontroller.uploadimagessssssulrl.first,
+      images: imagepickercontroller.uploadimagessssssulrl,
+      condtion: dropdowncontroller.condtionselectedvalue.value,
+      ram: ramcontroller.text,
+      brand: dropdowncontroller.selectedvalue.value,
+      color: colorcontroller.text,
+      storage: storagecontroller.text,
+    );
+    userrepositycontroller.addtheproducts(products, radnomnumber);
+    print("add productssucesss");
   }
 
-  void editproducts(String id) {
+  // Future<void> clearimages() async {
+  //   print("worfingg");
+  //   imagepickercontroller.imagepatgs.clear();
+  // }
+
+  Future<void> editproducts(String id) async {
+    await imagepickercontroller.uploadimagetocloudinary();
     final editheproducts = Prouductmodels(
       id: id,
       mobilemodelname: mobilename.text,
       stock: int.parse(stockquantity.text),
       price: double.parse(pricecontroller.text),
-      thumbnail: imagepickercontroller.uploadimageurl.value,
-      images: [],
+      thumbnail: imagepickercontroller.uploadimagessssssulrl.first,
+      images: imagepickercontroller.uploadimagessssssulrl,
       condtion: dropdowncontroller.condtionselectedvalue.value,
       ram: ramcontroller.text,
       brand: dropdowncontroller.selectedvalue.value,

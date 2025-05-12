@@ -13,6 +13,15 @@ class Imagepickercontroller extends GetxController {
   final RxList<String> uploadimagessssssulrl = <String>[].obs;
   final RxList<String> imagepatgs = <String>[].obs;
   List<PlatformFile>? selectedimages;
+
+  // @override
+  // void onInit() {
+  //   // TODO: implement onInit
+  //   super.onInit();
+  //   imagepatgs.clear();
+  //   print(imagepatgs);
+  // }
+
   // Step 1 Pick the image
   void pickimage() async {
     final result = await FilePicker.platform.pickFiles(
@@ -27,6 +36,7 @@ class Imagepickercontroller extends GetxController {
       selectedimages = result.files;
       print("imagepath:-${selectedimages}");
       // selctedimage.value = File(result.files.single.path!);
+      // imagepatgs.clear();
     }
   }
 

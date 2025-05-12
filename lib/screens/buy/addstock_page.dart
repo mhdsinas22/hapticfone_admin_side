@@ -23,7 +23,7 @@ class AddstockPage extends StatelessWidget {
     this.editram = "",
     this.editstock = 0,
     this.editstrogae = "",
-    this.image = "",
+    this.image,
   });
   final bool editpage;
   final String id;
@@ -35,14 +35,12 @@ class AddstockPage extends StatelessWidget {
   final String editcondion;
   final int editstock;
   final double editprice;
-  final String image;
+  final List<dynamic>? image;
   @override
   Widget build(BuildContext context) {
-    final imagepickercontroller = Get.put(
-      Imagepickercontroller(),
-      permanent: true,
-    );
+    final imagepickercontroller = Get.put(Imagepickercontroller());
     final usercontroller = Get.put(Usercontroller());
+
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -63,21 +61,18 @@ class AddstockPage extends StatelessWidget {
                 heigth: 207,
                 boxDecoration: BoxDecoration(border: Border.all()),
                 child: Obx(() {
-                  if (imagepickercontroller.imagepatgs.isNotEmpty) {
-                    print("its working");
-                    return CarouselSlider.builder(
-                      itemCount: imagepickercontroller.imagepatgs.length,
-                      options: CarouselOptions(viewportFraction: 1),
+                  return imagepickercontroller.imagepatgs.isNotEmpty
+                      ? CarouselSlider.builder(
+                        itemCount: imagepickercontroller.imagepatgs.length,
+                        options: CarouselOptions(viewportFraction: 1),
 
-                      itemBuilder: (context, index, realIndex) {
-                        return Image.file(
-                          File(imagepickercontroller.imagepatgs[index]),
-                        );
-                      },
-                    );
-                  } else {
-                    return Center(child: Icon(Icons.image));
-                  }
+                        itemBuilder: (context, index, realIndex) {
+                          return Image.file(
+                            File(imagepickercontroller.imagepatgs[index]),
+                          );
+                        },
+                      )
+                      : Center(child: Icon(Icons.image));
                 }),
               ),
             ),
@@ -90,7 +85,7 @@ class AddstockPage extends StatelessWidget {
             ),
             Addstocktextformfiled(
               editcolor: editcolor,
-              // editbrand: selectedvalye,
+              editbrand: editbrand,
               editcondion: editcondion,
               editmobilename: editmobilename,
               editprice: editprice,

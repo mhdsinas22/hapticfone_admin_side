@@ -37,6 +37,7 @@ class Addstocktextformfiled extends StatelessWidget {
     usercontroller.stockquantity.text = editstock.toString();
     dropdowncontroller.selectedvalue.value = editbrand;
     dropdowncontroller.condtionselectedvalue.value = editcondion;
+
     return Column(
       children: [
         Padding(
@@ -45,7 +46,10 @@ class Addstocktextformfiled extends StatelessWidget {
             width: 340.w,
             child: Obx(
               () => DropdownWidget(
-                // values: dropdowncontroller.selectedvalue.value,
+                values:
+                    dropdowncontroller.selectedvalue.value.isEmpty
+                        ? null
+                        : dropdowncontroller.selectedvalue.value,
                 hinttext: "Select the Brand",
                 items:
                     dropdowncontroller.branditems
@@ -129,6 +133,10 @@ class Addstocktextformfiled extends StatelessWidget {
           child: SizedBox(
             width: 340.w,
             child: DropdownWidget(
+              values:
+                  dropdowncontroller.condtionselectedvalue.value.isEmpty
+                      ? null
+                      : dropdowncontroller.condtionselectedvalue.value,
               hinttext: "Select the Condtion",
               items:
                   dropdowncontroller.condtionitems.map((items) {
