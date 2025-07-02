@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "hapticfone-ff0c4"
+  },
+  "targets": {
+    "hapticfone-ff0c4": {
+      "hosting": {
+        "admin": [
+          "hapticfone-admin"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
